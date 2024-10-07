@@ -1,7 +1,6 @@
-1173
-N = [int(input()]
-for i in range(9):
-     N.append(numero*2)
+N = [int(input())]
 
-for i in range(len(N)):
-      print(f‘[N{i}] = {N[i]}’) 
+print('0º =',*N)
+for i in range(1,11):
+    N.append(N[-1]*2)
+    print(f'{i}º = {N[i]}') 
