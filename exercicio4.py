@@ -1,13 +1,12 @@
+import math
 testes = int(input('Testes: '))
 
-i = 0
-while i < testes:
-    QT,S = input().split()
-    QT = int(QT)
-    S = int(S)
+for i in range(testes):
+    A,R = list(map(int,input().split()))
+    tentativas = list(map(int,input('Número: ').split()))[:A]
     
-    tentativas = (map(int,input('Número: ')[:QT]))
-    for numeros in tentativas:
-        if numeros == S:
-            print(f'{QT}º aluno correto!')
-
+    R2 = math.floor(R)
+    for n in tentativas:
+        if n == R or n == R2:
+            posicao = tentativas.index(n)
+            print(f'{posicao+1}º aluno correto!')
