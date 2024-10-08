@@ -5,8 +5,8 @@ for i in range(testes):
     A,R = list(map(int,input().split()))
     tentativas = list(map(int,input('Número: ').split()))[:A]
     
-    R2 = math.floor(R)
+    R = float(R)
     for n in tentativas:
-        if n == R or n == R2:
+        if n == R or n == math.floor(R):
             posicao = tentativas.index(n)
             print(f'{posicao+1}º aluno correto!')
